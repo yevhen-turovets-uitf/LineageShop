@@ -18,9 +18,6 @@
         <BCol sm="6" xs="12">
           <div class="d-flex justify-content-end align-items-center">
             <div class="ml-auto">
-              <RouterLink to="#" class="vk-icon bg-light p-2 rounded-circle">
-                <FontAwesomeIcon :icon="['fab', 'vk']" size="lg" />
-              </RouterLink>
             </div>
             <div class="ml-3">РАЗРАБОТАНО</div>
           </div>

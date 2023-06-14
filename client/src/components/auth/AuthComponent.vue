@@ -84,14 +84,6 @@
         />
       </BButton>
       <BButton
-        @click="socialite('vkontakte')"
-        class="mt-2"
-        variant="outline-secondary"
-      >
-        Вход через VK
-        <FontAwesomeIcon :icon="['fab', 'vk']" size="lg" class="ml-1" />
-      </BButton>
-      <BButton
         @click="socialite('discord')"
         class="mt-2"
         variant="outline-secondary"

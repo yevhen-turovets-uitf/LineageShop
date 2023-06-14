@@ -2,9 +2,6 @@
   <BNavbarNav class="ml-auto">
     <BNavItem to="/auth">Войти</BNavItem>
     <BNavItem to="/registration">Зарегестрироваться</BNavItem>
-    <BNavItem href="#" class="vk-icon">
-      <FontAwesomeIcon :icon="['fab', 'vk']" size="lg" />
-    </BNavItem>
     <BNavItemDropdown right>
       <template #button-content>
         По русски
