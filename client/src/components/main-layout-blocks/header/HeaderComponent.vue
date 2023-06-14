@@ -10,7 +10,14 @@
 
         <BCollapse id="nav-collapse" is-nav>
           <BNavbarNav>
-            <BNavItemDropdown text="Помощь" right>
+            <RouterLink
+                v-if="!this.getLoggedUser"
+                :to="{ name: 'SupportRequest' }"
+                class="text-decoration-none"
+            >
+              Помощь
+            </RouterLink>
+            <BNavItemDropdown v-else text="Помощь" right>
               <BDropdownItem href="#">Правила</BDropdownItem>
               <BDropdownItem href="#">Центр помощи</BDropdownItem>
               <BDropdownItem v-if="this.getLoggedUser">
