@@ -53,7 +53,7 @@
         />
         <span
           class="currency-symbol position-absolute font-weight-bold ml-2 text-right"
-          >₽</span
+          >$</span
         >
       </BFormGroup>
       <BFormGroup v-if="addedData.typeId" class="position-relative">

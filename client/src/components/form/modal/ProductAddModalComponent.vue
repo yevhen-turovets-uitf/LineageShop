@@ -13,11 +13,11 @@
         <BTbody>
           <BTr>
             <BTd class="fa-xs m-0 p-0">Банковская карта</BTd>
-            <BTd class="fa-xs m-0 p-0">2000 ₽</BTd>
+            <BTd class="fa-xs m-0 p-0">2000 $</BTd>
           </BTr>
           <BTr>
             <BTd class="fa-xs m-0 p-0">Банковская карта</BTd>
-            <BTd class="fa-xs m-0 p-0">2000 ₽</BTd>
+            <BTd class="fa-xs m-0 p-0">2000 $</BTd>
           </BTr>
         </BTbody>
       </BTableSimple>
