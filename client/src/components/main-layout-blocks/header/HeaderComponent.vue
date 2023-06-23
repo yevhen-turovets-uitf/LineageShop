@@ -3,7 +3,7 @@
     <BContainer class="header-container">
       <BNavbar toggleable="lg">
         <BNavbarBrand to="/" class="logo p-0">
-          <img alt="" class="logo" src="@/assets/logo.svg" />
+          <span class="logo">L-Shop</span>
         </BNavbarBrand>
 
         <BNavbarToggle target="nav-collapse"></BNavbarToggle>
