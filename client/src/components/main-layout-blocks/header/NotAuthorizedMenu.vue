@@ -1,14 +1,14 @@
 <template>
   <BNavbarNav class="ml-auto">
-    <BNavItem to="/auth">Войти</BNavItem>
-    <BNavItem to="/registration">Зарегестрироваться</BNavItem>
+    <BNavItem to="/auth">{{ $t('mainLayoutBlocks.login') }}</BNavItem>
+    <BNavItem to="/registration">{{ $t('mainLayoutBlocks.register') }}</BNavItem>
     <BNavItemDropdown right>
       <template #button-content>
-        По русски
+        {{ $t('mainLayoutBlocks.russian') }}
         <img width="18" height="18" alt="" src="@/assets/rus.svg" />
       </template>
       <BDropdownItem href="#">
-        English
+        {{ $t('mainLayoutBlocks.english') }}
         <img width="18" height="18" alt="" src="@/assets/eng.svg" />
       </BDropdownItem>
     </BNavItemDropdown>

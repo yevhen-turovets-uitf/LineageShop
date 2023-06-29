@@ -10,7 +10,7 @@
     </BTh>
     <BTh class="product-description font-weight-normal">
       <span>{{ financeOperation.type.title }}</span>
-      денег #{{ financeOperation.id }}
+      {{ $t('finances.money') }} #{{ financeOperation.id }}
       <span class="text-secondary ml-2">
         {{ financeOperation.wallet.info }}
       </span>

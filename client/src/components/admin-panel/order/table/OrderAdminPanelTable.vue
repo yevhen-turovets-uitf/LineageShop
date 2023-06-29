@@ -4,10 +4,10 @@
       <BTableSimple borderless hover>
         <BThead class="border-bottom pb-3">
           <BTr>
-            <BTh>ID</BTh>
-            <BTh>Покупатель</BTh>
-            <BTh>Продавец</BTh>
-            <BTh>Статус заказа</BTh>
+            <BTh>{{ $t('adminPanel.id') }}ID</BTh>
+            <BTh>{{ $t('adminPanel.buyer') }}Покупатель</BTh>
+            <BTh>{{ $t('adminPanel.seller') }}Продавец</BTh>
+            <BTh>{{ $t('adminPanel.orderStatus') }}Статус заказа</BTh>
             <BTh> </BTh>
           </BTr>
         </BThead>

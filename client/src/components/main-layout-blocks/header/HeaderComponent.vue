@@ -15,17 +15,17 @@
                 :to="{ name: 'SupportRequest' }"
                 class="text-decoration-none"
             >
-              Помощь
+              {{ $t('mainLayoutBlocks.help') }}
             </RouterLink>
             <BNavItemDropdown v-else text="Помощь" right>
-              <BDropdownItem href="#">Правила</BDropdownItem>
-              <BDropdownItem href="#">Центр помощи</BDropdownItem>
+              <BDropdownItem href="#">{{ $t('mainLayoutBlocks.rules') }}</BDropdownItem>
+              <BDropdownItem href="#">{{ $t('mainLayoutBlocks.helpCenter') }}</BDropdownItem>
               <BDropdownItem v-if="this.getLoggedUser">
                 <RouterLink
                   :to="{ name: 'SupportRequest' }"
                   class="text-decoration-none"
                 >
-                  Отправить запрос
+                  {{ $t('mainLayoutBlocks.sendRequest') }}
                 </RouterLink>
               </BDropdownItem>
               <BDropdownItem v-if="this.getLoggedUser">
@@ -33,7 +33,7 @@
                   :to="{ name: 'SupportRequestsTable' }"
                   class="text-decoration-none"
                 >
-                  Мои запросы
+                  {{ $t('mainLayoutBlocks.myRequests') }}
                 </RouterLink>
               </BDropdownItem>
             </BNavItemDropdown>

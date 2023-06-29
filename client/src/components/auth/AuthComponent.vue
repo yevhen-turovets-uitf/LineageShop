@@ -2,7 +2,7 @@
   <BRow>
     <BCol md="4" ld="12">
       <BForm @submit.prevent="login">
-        <BFormGroup id="email-group" label="ПОЧТА" label-for="email-input">
+        <BFormGroup id="email-group" :label="$t('auth.email')" label-for="email-input">
           <BFormInput
             id="email-input"
             v-model="$v.loginData.email.$model"
@@ -13,18 +13,18 @@
             class="error bg-white text-danger mb-2"
             v-if="!$v.loginData.email.required && clickedEmail"
           >
-            Введите email
+            {{ $t('auth.enterEmail') }}
           </div>
           <div
             class="error bg-white text-danger mb-2"
             v-if="!$v.loginData.email.email && clickedEmail"
           >
-            Введенный Email не корректен
+            {{ $t('auth.enteredEmailIsNotCorrect') }}
           </div>
         </BFormGroup>
         <BFormGroup
           id="password-group"
-          label="ПАРОЛЬ"
+          :label="$t('auth.password')"
           label-for="password-input"
         >
           <BFormInput
@@ -38,19 +38,19 @@
             class="error bg-white text-danger mb-2"
             v-if="!$v.loginData.password.required && clickedPassword"
           >
-            Введите пароль
+            {{ $t('auth.enterPassword') }}
           </div>
           <div
             class="error bg-white text-danger mb-2"
             v-if="!$v.loginData.password.minLength && clickedPassword"
           >
-            Пароль должен содержать минимум
-            {{ $v.loginData.password.$params.minLength.min }} символов
+            {{ $t('auth.thePasswordMustContainAMinimum') }}
+            {{ $v.loginData.password.$params.minLength.min }} {{ $t('auth.characters') }}
           </div>
         </BFormGroup>
-        <BButton type="submit" variant="primary">Войти</BButton>
+        <BButton type="submit" variant="primary">{{ $t('auth.enter') }}</BButton>
         <RouterLink class="ml-3" :to="{ name: 'ForgotPassword' }"
-          >Забыл пароль?</RouterLink
+          >{{ $t('auth.forgotYourPassword') }}</RouterLink
         >
       </BForm>
     </BCol>
@@ -60,7 +60,7 @@
         class="mt-2"
         variant="outline-secondary"
       >
-        Вход через Google
+        {{ $t('auth.signInWithGoogle') }}
         <FontAwesomeIcon :icon="['fab', 'google']" size="lg" class="ml-1" />
       </BButton>
       <BButton
@@ -68,7 +68,7 @@
         class="mt-2"
         variant="outline-secondary"
       >
-        Вход через Yandex
+        {{ $t('auth.loginViaYandex') }}
         <FontAwesomeIcon :icon="['fab', 'yandex']" size="lg" class="ml-1" />
       </BButton>
       <BButton
@@ -76,7 +76,7 @@
         class="mt-2"
         variant="outline-secondary"
       >
-        Вход через FB
+        {{ $t('auth.loginViaFB') }}
         <FontAwesomeIcon
           :icon="['fab', 'facebook-square']"
           size="lg"
@@ -88,7 +88,7 @@
         class="mt-2"
         variant="outline-secondary"
       >
-        Вход через Discord
+        {{ $t('auth.loginViaDiscord') }}
         <FontAwesomeIcon :icon="['fab', 'discord']" size="lg" class="ml-1" />
       </BButton>
     </BCol>

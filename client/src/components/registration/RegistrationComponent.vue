@@ -1,7 +1,7 @@
 <template>
   <BCol md="4" ld="12">
     <BForm @submit.prevent="onRegister">
-      <BFormGroup id="login-group" label="ЛОГИН/НИК" label-for="login-input">
+      <BFormGroup id="login-group" :label="$t('registration.login')" label-for="login-input">
         <BFormInput
           id="login-input"
           v-model="$v.registerData.login.$model"
@@ -12,17 +12,17 @@
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.login.required && clickedLogin"
         >
-          Введите логин / ник
+          {{ $t('productDetails.enterYourUsername') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.login.minLength && clickedLogin"
         >
-          Минимальная длинна лонгина/ника составляет
-          {{ $v.registerData.login.$params.minLength.min }} символа
+          {{ $t('productDetails.minimumLoginLength') }}
+          {{ $v.registerData.login.$params.minLength.min }} {{ $t('productDetails.character') }}
         </div>
       </BFormGroup>
-      <BFormGroup id="email-group" label="ПОЧТА" label-for="email-input">
+      <BFormGroup id="email-group" :label="$t('registration.email')" label-for="email-input">
         <BFormInput
           id="email-input"
           type="text"
@@ -34,16 +34,16 @@
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.email.required && clickedEmail"
         >
-          Введите Email
+          {{ $t('productDetails.enterEmail') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.email.email && clickedEmail"
         >
-          Вы ввели некорректный Email
+          {{ $t('productDetails.invalidEmail') }}
         </div>
       </BFormGroup>
-      <BFormGroup id="password-group" label="ПАРОЛЬ" label-for="password-input">
+      <BFormGroup id="password-group" :label="$t('registration.password')" label-for="password-input">
         <BFormInput
           id="password-input"
           type="password"
@@ -55,19 +55,19 @@
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.password.required && clickedPassword"
         >
-          Введите пароль
+          {{ $t('productDetails.enterPassword') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.password.minLength && clickedPassword"
         >
-          Пароль должен содержать минимум
-          {{ $v.registerData.password.$params.minLength.min }} символов
+          {{ $t('productDetails.passwordMustBeAtLeast') }}
+          {{ $v.registerData.password.$params.minLength.min }} {{ $t('productDetails.characters') }}
         </div>
       </BFormGroup>
       <BFormGroup
         id="confirm-password-group"
-        label="ПОВТОРИТЕ ПАРОЛЬ"
+        :label="$t('registration.repeatPassword')"
         label-for="confirm-password-input"
       >
         <BFormInput
@@ -84,7 +84,7 @@
               clickedConfirmationPassword
           "
         >
-          Повторите пароль
+          {{ $t('productDetails.repeatPasswordLower') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
@@ -93,7 +93,7 @@
               clickedConfirmationPassword
           "
         >
-          Пароли должны совпадать
+          {{ $t('productDetails.passwordsMustMatch') }}
         </div>
       </BFormGroup>
       <BFormCheckbox
@@ -102,9 +102,9 @@
         name="check-button"
         switch
       >
-        Лицензия
+        {{ $t('productDetails.license') }}
       </BFormCheckbox>
-      <BButton type="submit" variant="primary">Зарегистрироваться</BButton>
+      <BButton type="submit" variant="primary">{{ $t('productDetails.register') }}</BButton>
     </BForm>
   </BCol>
 </template>

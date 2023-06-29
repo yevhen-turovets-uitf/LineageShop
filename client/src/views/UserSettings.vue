@@ -1,10 +1,10 @@
 <template>
   <div>
-    <TitleComponent>Настройки</TitleComponent>
+    <TitleComponent>{{ $t('userSettings.settings') }}</TitleComponent>
     <BContainer>
       <BRow class="border-bottom">
         <BCol cols="12" md="4">
-          <h5 class="font-weight-bold">Личное</h5>
+          <h5 class="font-weight-bold">{{ $t('userSettings.personal') }}</h5>
         </BCol>
         <BCol cols="12" md="8" class="m-3 m-md-0">
           <BRow class="d-flex">
@@ -21,7 +21,7 @@
                 class="pl-4 pr-4 mb-2 font-weight-bold shadow-none"
               >
                 <RouterLink to="#" class="text-dark text-decoration-none"
-                  >Изменить аватарку</RouterLink
+                  >{{ $t('userSettings.changeAvatar') }}</RouterLink
                 ></BButton
               >
               <BButton
@@ -31,7 +31,7 @@
                 <RouterLink
                   :to="{ name: 'ChangePassword' }"
                   class="text-dark text-decoration-none"
-                  >Изменить пароль</RouterLink
+                  >{{ $t('userSettings.changePassword') }}</RouterLink
                 ></BButton
               >
               <BButton
@@ -41,7 +41,7 @@
                 <RouterLink
                   :to="{ name: 'BindEmail' }"
                   class="text-dark text-decoration-none"
-                  >Изменить почту</RouterLink
+                  >{{ $t('userSettings.changeEmail') }}</RouterLink
                 ></BButton
               >
               <BButton
@@ -51,7 +51,7 @@
                 <RouterLink
                   :to="{ name: 'UserWallets' }"
                   class="text-dark text-decoration-none"
-                  >Кошельки</RouterLink
+                  >{{ $t('userSettings.wallets') }}</RouterLink
                 ></BButton
               >
             </div>
@@ -60,7 +60,7 @@
       </BRow>
       <BRow class="pt-4">
         <BCol cols="12" md="4">
-          <h5 class="font-weight-bold">Оповещения</h5>
+          <h5 class="font-weight-bold">{{ $t('userSettings.notifications') }}</h5>
         </BCol>
         <BCol cols="12" md="8" class="m-3 m-md-0">
           <div>
@@ -70,7 +70,7 @@
                 :icon="['fa', 'exclamation-circle']"
                 size="lg"
               />
-              <span>Мы будем оповещать вас о непрочитанных сообщениях.</span>
+              <span>{{ $t('userSettings.unreadMessages') }}</span>
             </BRow>
             <BRow class="d-flex">
               <div
@@ -84,12 +84,10 @@
               </div>
               <div class="ml-5 d-flex flex-column w-50">
                 <h5 class="font-weight-bold">
-                  Оповещения по электронной почте
+                  {{ $t('userSettings.emailNotifications') }}
                 </h5>
                 <p>
-                  Приходят на почту, привязанную к учетной записи. Настройте
-                  автоматическую проверку почты на своём телефоне (Android, iOS
-                  и пр.), чтобы всегда быть на связи.
+                  {{ $t('userSettings.text') }}
                 </p>
                 <BButton
                   @click="onToggleCurrentUserEmailNotification"
