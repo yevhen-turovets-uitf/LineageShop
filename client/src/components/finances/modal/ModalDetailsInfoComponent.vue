@@ -48,7 +48,7 @@
         </BCol>
         <BCol md="8">
           <span v-if="!financeOperation.type.isEnrollment">-</span>
-          {{ financeOperation.money }} ₽
+          {{ financeOperation.money }} $
         </BCol>
       </BRow>
       <BRow class="pt-3">

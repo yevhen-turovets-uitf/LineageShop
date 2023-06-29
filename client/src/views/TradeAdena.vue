@@ -65,13 +65,13 @@
                         >
                           <BFormInput></BFormInput
                           ><span class="font-weight-bold position-absolute pr-3"
-                            >₽</span
+                            >$</span
                           >
                         </div>
                       </BTd>
                       <BTd>
                         <div>
-                          <span>151.87 ₽</span>
+                          <span>151.87 $</span>
                           <RouterLink to="#" class="ml-1">
                             <FontAwesomeIcon
                               :icon="['fas', 'question-circle']"
@@ -85,16 +85,16 @@
                               <BTbody>
                                 <BTr>
                                   <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
-                                  <BTd class="w-50">153.12 ₽</BTd> </BTr
+                                  <BTd class="w-50">153.12 $</BTd> </BTr
                                 ><BTr>
                                   <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
-                                  <BTd class="w-50">153.12 ₽</BTd> </BTr
+                                  <BTd class="w-50">153.12 $</BTd> </BTr
                                 ><BTr>
                                   <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
-                                  <BTd class="w-50">153.12 ₽</BTd> </BTr
+                                  <BTd class="w-50">153.12 $</BTd> </BTr
                                 ><BTr>
                                   <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
-                                  <BTd class="w-50">153.12 ₽</BTd>
+                                  <BTd class="w-50">153.12 $</BTd>
                                 </BTr>
                               </BTbody>
                             </BTableSimple>
@@ -120,7 +120,7 @@
                   aria-describedby="min-sum-help-block"
                 >
                 </BFormInput>
-                <span class="position-absolute font-weight-bold pr-3">₽</span>
+                <span class="position-absolute font-weight-bold pr-3">$</span>
               </div>
               <BFormText id="min-sum-help-block">
                 {{ $t('tradeAdena.less') }}

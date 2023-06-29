@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\QuestionController;
 use App\Http\Controllers\Api\SocialiteAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
@@ -205,3 +206,13 @@ Route::prefix('/')->group( function(){
     Route::get('/{providerName}/auth', [SocialiteAuthController::class, 'authUserFromSocialite']);
     Route::get('/{providerName}/callback', [SocialiteAuthController::class, 'addUserFromSocialite']);
 });
+
+Route::group(
+    [
+        'prefix' => '/questions',
+    ],
+    function () {
+        Route::get('/', [QuestionController::class, 'getAll']);
+        Route::get('/{questionSlug}', [QuestionController::class, 'getBySlug']);
+    }
+);

@@ -891,7 +891,6 @@ export default {
             toRecipient: 'К получателю',
             toSender: 'У отправителя',
             cancellationDate: 'Дата отмены',
-
             takeToWork: 'Взять в работу',
             cancel: 'Отменить',
             id: 'ID',

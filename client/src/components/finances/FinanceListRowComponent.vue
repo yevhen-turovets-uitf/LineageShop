@@ -25,7 +25,7 @@
     </BTh>
     <BTh class="product-description font-weight-bold text-md-right">
       <span v-if="!financeOperation.type.isEnrollment">-</span>
-      {{ financeOperation.money }} ₽
+      {{ financeOperation.money }} $
       <span v-b-modal="`finance-details${financeOperation.id}`">
         <FontAwesomeIcon
           :icon="['fas', 'chevron-right']"

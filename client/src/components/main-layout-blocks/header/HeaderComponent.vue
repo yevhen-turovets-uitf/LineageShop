@@ -3,24 +3,24 @@
     <BContainer class="header-container">
       <BNavbar toggleable="lg">
         <BNavbarBrand to="/" class="logo p-0">
-          <img alt="" class="logo" src="@/assets/logo.svg" />
+          <span class="logo">L-Shop</span>
         </BNavbarBrand>
 
         <BNavbarToggle target="nav-collapse"></BNavbarToggle>
 
         <BCollapse id="nav-collapse" is-nav>
           <BNavbarNav>
-            <RouterLink
-                v-if="!this.getLoggedUser"
-                :to="{ name: 'SupportRequest' }"
-                class="text-decoration-none"
-            >
-              {{ $t('mainLayoutBlocks.help') }}
-            </RouterLink>
-            <BNavItemDropdown v-else text="Помощь" right>
+            <BNavItemDropdown :text="$t('mainLayoutBlocks.help')" right>
               <BDropdownItem href="#">{{ $t('mainLayoutBlocks.rules') }}</BDropdownItem>
-              <BDropdownItem href="#">{{ $t('mainLayoutBlocks.helpCenter') }}</BDropdownItem>
-              <BDropdownItem v-if="this.getLoggedUser">
+              <BDropdownItem href="#">
+                <RouterLink
+                    :to="{ name: 'FAQ' }"
+                    class="text-decoration-none"
+                >
+                  {{ $t('mainLayoutBlocks.helpCenter') }}
+                </RouterLink>
+              </BDropdownItem>
+              <BDropdownItem>
                 <RouterLink
                   :to="{ name: 'SupportRequest' }"
                   class="text-decoration-none"

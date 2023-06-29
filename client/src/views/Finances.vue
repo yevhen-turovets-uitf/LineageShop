@@ -5,7 +5,7 @@
         <h1>
           {{ $t('financesPage.finance') }}
           <span class="hidden-xs">·</span>
-          <span> {{ financeValue }} ₽ </span>
+          <span> {{ financeValue }} $ </span>
         </h1>
       </BCol>
     </BRow>

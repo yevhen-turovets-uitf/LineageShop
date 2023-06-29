@@ -64,14 +64,6 @@
         <FontAwesomeIcon :icon="['fab', 'google']" size="lg" class="ml-1" />
       </BButton>
       <BButton
-        @click="socialite('yandex')"
-        class="mt-2"
-        variant="outline-secondary"
-      >
-        {{ $t('auth.loginViaYandex') }}
-        <FontAwesomeIcon :icon="['fab', 'yandex']" size="lg" class="ml-1" />
-      </BButton>
-      <BButton
         @click="socialite('facebook')"
         class="mt-2"
         variant="outline-secondary"
