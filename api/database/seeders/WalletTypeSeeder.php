@@ -11,7 +11,7 @@ class WalletTypeSeeder extends Seeder
     {
         DB::table('wallet_types')->insert(['name' => 'PayPal', 'wallet_symbol' => '$']);
         DB::table('wallet_types')->insert(['name' => 'Payoneer', 'wallet_symbol' => '$']);
-        DB::table('wallet_types')->insert(['name' => 'Банковская карта', 'wallet_symbol' => '$']);
-        DB::table('wallet_types')->insert(['name' => 'Личный баланс', 'wallet_symbol' => '$']);
+        DB::table('wallet_types')->insert(['name' => 'Bank card', 'wallet_symbol' => '$']);
+        DB::table('wallet_types')->insert(['name' => 'Personal balance', 'wallet_symbol' => '$']);
     }
 }
