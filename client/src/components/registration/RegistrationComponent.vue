@@ -12,14 +12,14 @@
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.login.required && clickedLogin"
         >
-          {{ $t('productDetails.enterYourUsername') }}
+          {{ $t('registration.enterYourUsername') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.login.minLength && clickedLogin"
         >
-          {{ $t('productDetails.minimumLoginLength') }}
-          {{ $v.registerData.login.$params.minLength.min }} {{ $t('productDetails.character') }}
+          {{ $t('registration.minimumLoginLength') }}
+          {{ $v.registerData.login.$params.minLength.min }} {{ $t('registration.character') }}
         </div>
       </BFormGroup>
       <BFormGroup id="email-group" :label="$t('registration.email')" label-for="email-input">
@@ -34,13 +34,13 @@
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.email.required && clickedEmail"
         >
-          {{ $t('productDetails.enterEmail') }}
+          {{ $t('registration.enterEmail') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.email.email && clickedEmail"
         >
-          {{ $t('productDetails.invalidEmail') }}
+          {{ $t('registration.invalidEmail') }}
         </div>
       </BFormGroup>
       <BFormGroup id="password-group" :label="$t('registration.password')" label-for="password-input">
@@ -55,14 +55,14 @@
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.password.required && clickedPassword"
         >
-          {{ $t('productDetails.enterPassword') }}
+          {{ $t('registration.enterPassword') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
           v-if="!$v.registerData.password.minLength && clickedPassword"
         >
-          {{ $t('productDetails.passwordMustBeAtLeast') }}
-          {{ $v.registerData.password.$params.minLength.min }} {{ $t('productDetails.characters') }}
+          {{ $t('registration.passwordMustBeAtLeast') }}
+          {{ $v.registerData.password.$params.minLength.min }} {{ $t('registration.characters') }}
         </div>
       </BFormGroup>
       <BFormGroup
@@ -84,7 +84,7 @@
               clickedConfirmationPassword
           "
         >
-          {{ $t('productDetails.repeatPasswordLower') }}
+          {{ $t('registration.repeatPasswordLower') }}
         </div>
         <div
           class="error bg-white text-danger mb-3"
@@ -93,7 +93,7 @@
               clickedConfirmationPassword
           "
         >
-          {{ $t('productDetails.passwordsMustMatch') }}
+          {{ $t('registration.passwordsMustMatch') }}
         </div>
       </BFormGroup>
       <BFormCheckbox
@@ -102,9 +102,9 @@
         name="check-button"
         switch
       >
-        {{ $t('productDetails.license') }}
+        {{ $t('registration.license') }}
       </BFormCheckbox>
-      <BButton type="submit" variant="primary">{{ $t('productDetails.register') }}</BButton>
+      <BButton type="submit" variant="primary">{{ $t('registration.register') }}</BButton>
     </BForm>
   </BCol>
 </template>
