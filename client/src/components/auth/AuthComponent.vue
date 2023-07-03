@@ -140,12 +140,14 @@ export default {
     async login() {
       if (!this.validationLoginForm()) {
         try {
-          await this.signIn(this.loginData);
-          await this.fetchLoggedUser();
+          const isSignInSuccessful = await this.signIn(this.loginData);
 
-          await this.$router.push({ name: 'Index' });
+          if (isSignInSuccessful !== false) {
+            await this.fetchLoggedUser();
+            await this.$router.push({ name: 'Index' });
+          }
         } catch (error) {
-          this.setErrorNotification(error);
+          this.setErrorNotification(error.message);
         }
       }
     },

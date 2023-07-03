@@ -26,7 +26,7 @@ export default {
       );
     }
   },
-  [actions.SIGN_IN]: async ({ dispatch }, loginData) => {
+  [actions.SIGN_IN]: async ({ commit, dispatch }, loginData) => {
     try {
       await AuthService.signIn(loginData);
     } catch (error) {
@@ -35,6 +35,7 @@ export default {
         error,
         { root: true }
       );
+      return false;
     }
   },
   [actions.FETCH_LOGGED_USER]: async ({ commit, dispatch }) => {
