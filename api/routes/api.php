@@ -156,8 +156,12 @@ Route::group(
     function () {
         Route::get('/change-verify', [UserController::class, 'updateEmailByUserId']);
         Route::get('/{userId}', [UserController::class, 'getUserById']);
+        Route::post('/bind-email', [UserController::class, 'bindEmail']);
+        Route::patch('/toggle-current-user-email-notification', [UserController::class, 'toggleCurrentUserEmailNotification']);
     }
 );
+
+
 
 Route::group(
     [
@@ -170,9 +174,7 @@ Route::group(
             Route::patch('/change-user-data', [UserController::class, 'changeUserData']);
             Route::get('/orders', [OrderController::class, 'getAllOrders']);
             Route::patch('/orders/change-order-status', [OrderController::class, 'changeOrderStatus']);
-            Route::post('/bind-email', [UserController::class, 'bindEmail']);
             Route::patch('/change-password', [UserController::class, 'changePassword']);
-            Route::patch('/toggle-current-user-email-notification', [UserController::class, 'toggleCurrentUserEmailNotification']);
         });
     }
 );
