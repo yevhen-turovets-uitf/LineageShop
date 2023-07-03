@@ -152,7 +152,7 @@ export default {
             finance: 'Finance',
             profile: 'Profile',
             settings: 'Settings',
-            English: 'English',
+            english: 'English',
             logOut: 'Log out',
             help: 'Help',
             rules: 'Rules',
