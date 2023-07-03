@@ -17,10 +17,6 @@
       <BDropdownItem class="border-top" :to="{ name: 'UserSettings' }">
         {{ $t('mainLayoutBlocks.settings') }}
       </BDropdownItem>
-      <BDropdownItem class="border-top" href="#">
-        {{ $t('mainLayoutBlocks.english') }}
-        <img width="18" height="18" alt="" src="@/assets/eng.svg" />
-      </BDropdownItem>
       <BDropdownItem class="border-top" @click="exit()">
         {{ $t('mainLayoutBlocks.logOut') }}
       </BDropdownItem>

@@ -354,7 +354,7 @@ export default {
             show: 'Show',
         },
         supportRequest: {
-            email: 'Email address mail',
+            email: 'Email address',
             enterEmail: 'Enter email',
             invalidEmail: 'The email you entered is invalid',
             subject: 'Subject',
