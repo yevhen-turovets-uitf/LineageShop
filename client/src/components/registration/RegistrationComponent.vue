@@ -181,9 +181,11 @@ export default {
     async onRegister() {
       if (!this.validationRegisterForm()) {
         try {
-          await this.registerUser(this.registerData);
+          const isRegisterSuccessful = await this.registerUser(this.registerData);
 
-          await this.$router.push({ name: 'EmailVerification' });
+          if (isRegisterSuccessful !== false) {
+            await this.$router.push({name: 'EmailVerification', query: {id: isRegisterSuccessful.id}});
+          }
         } catch (error) {
           this.setErrorNotification(error);
         }

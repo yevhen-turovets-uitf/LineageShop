@@ -64,9 +64,11 @@ export default {
 
     async onVerifiedEmail() {
       try {
-        await this.verifiedEmail(this.verifiedEmailData);
+        const verified = await this.verifiedEmail(this.verifiedEmailData);
 
-        await this.$router.push({ name: 'Auth' });
+        if (verified !== false) {
+          await this.$router.push({name: 'Auth'});
+        }
       } catch (error) {
         this.setErrorNotification(error);
       }
