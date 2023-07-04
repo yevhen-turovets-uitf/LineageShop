@@ -43,9 +43,6 @@
             class="shadow-none"
             >{{ $t('changePassword.save') }}</BButton
           >
-          <RouterLink class="ml-3" :to="{ name: 'ForgotPassword' }"
-            >{{ $t('changePassword.forgotPassword') }}</RouterLink
-          >
         </BCol>
       </BRow>
     </BContainer>
