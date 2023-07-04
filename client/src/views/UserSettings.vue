@@ -16,44 +16,51 @@
               ></AvatarComponent>
             </div>
             <div class="ml-5 d-flex flex-column w-50">
-              <BButton
-                variant="light"
-                class="pl-4 pr-4 mb-2 font-weight-bold shadow-none"
-              >
-                <RouterLink to="#" class="text-dark text-decoration-none"
-                  >{{ $t('userSettings.changeAvatar') }}</RouterLink
-                ></BButton
-              >
-              <BButton
-                variant="light"
-                class="pl-4 pr-4 mb-2 font-weight-bold shadow-none"
-              >
-                <RouterLink
-                  :to="{ name: 'ChangePassword' }"
-                  class="text-dark text-decoration-none"
-                  >{{ $t('userSettings.changePassword') }}</RouterLink
-                ></BButton
-              >
-              <BButton
-                variant="light"
-                class="pl-4 pr-4 mb-2 font-weight-bold shadow-none"
-              >
+
+
+                <RouterLink to="#" class="text-dark text-decoration-none">
+                  <BButton
+                      variant="light"
+                      class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                  >
+                    {{ $t('userSettings.changeAvatar') }}
+                  </BButton>
+                </RouterLink>
+
+                <RouterLink :to="{ name: 'ChangePassword' }" class="text-dark text-decoration-none">
+                  <BButton
+                    variant="light"
+                    class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                  >
+                    {{ $t('userSettings.changePassword') }}
+                  </BButton>
+                </RouterLink>
+
                 <RouterLink
                   :to="{ name: 'BindEmail' }"
                   class="text-dark text-decoration-none"
-                  >{{ $t('userSettings.changeEmail') }}</RouterLink
-                ></BButton
-              >
-              <BButton
-                variant="light"
-                class="pl-4 pr-4 mb-2 font-weight-bold shadow-none"
-              >
+                  >
+                  <BButton
+                      variant="light"
+                      class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                  >
+                    {{ $t('userSettings.changeEmail') }}
+                  </BButton>
+                </RouterLink>
+
+
                 <RouterLink
                   :to="{ name: 'UserWallets' }"
                   class="text-dark text-decoration-none"
-                  >{{ $t('userSettings.wallets') }}</RouterLink
-                ></BButton
-              >
+                  >
+                  <BButton
+                      variant="light"
+                      class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                  >
+                    {{ $t('userSettings.wallets') }}
+                  </BButton>
+                </RouterLink>
+
             </div>
           </BRow>
         </BCol>
@@ -153,5 +160,8 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.profile-link {
+  width: 100%;
 }
 </style>
