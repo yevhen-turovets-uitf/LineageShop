@@ -22,7 +22,7 @@
               size="lg"
             />
             <div>
-              {{ $t('chat.text') }} "<RouterLink to="#">{{ $t('chat.mySales') }}</RouterLink>".
+              <span v-html="$t('chat.text')"></span> "<RouterLink to="/orders/sales">{{ $t('chat.mySales') }}</RouterLink>".
             </div>
           </BAlert>
         </BCol>
