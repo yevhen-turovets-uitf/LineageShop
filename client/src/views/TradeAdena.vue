@@ -34,9 +34,15 @@
                     <BTr>
                       <BTh> </BTh>
                       <BTh>{{ $t('tradeAdena.server') }}</BTh>
-                      <BTh class="font-weight-normal">{{ $t('tradeAdena.availability') }}</BTh>
-                      <BTh class="font-weight-normal">{{ $t('tradeAdena.price') }}</BTh>
-                      <BTh class="font-weight-normal">{{ $t('tradeAdena.catalogPrice') }}</BTh>
+                      <BTh class="font-weight-normal">{{
+                        $t('tradeAdena.availability')
+                      }}</BTh>
+                      <BTh class="font-weight-normal">{{
+                        $t('tradeAdena.price')
+                      }}</BTh>
+                      <BTh class="font-weight-normal">{{
+                        $t('tradeAdena.catalogPrice')
+                      }}</BTh>
                     </BTr>
                   </BThead>
                   <BTbody>
@@ -84,16 +90,24 @@
                             <BTableSimple class="mt-3">
                               <BTbody>
                                 <BTr>
-                                  <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
+                                  <BTd class="w-50">{{
+                                    $t('tradeAdena.card')
+                                  }}</BTd>
                                   <BTd class="w-50">153.12 $</BTd> </BTr
                                 ><BTr>
-                                  <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
+                                  <BTd class="w-50">{{
+                                    $t('tradeAdena.card')
+                                  }}</BTd>
                                   <BTd class="w-50">153.12 $</BTd> </BTr
                                 ><BTr>
-                                  <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
+                                  <BTd class="w-50">{{
+                                    $t('tradeAdena.card')
+                                  }}</BTd>
                                   <BTd class="w-50">153.12 $</BTd> </BTr
                                 ><BTr>
-                                  <BTd class="w-50">{{ $t('tradeAdena.card') }}</BTd>
+                                  <BTd class="w-50">{{
+                                    $t('tradeAdena.card')
+                                  }}</BTd>
                                   <BTd class="w-50">153.12 $</BTd>
                                 </BTr>
                               </BTbody>
@@ -109,9 +123,9 @@
           </BCol>
           <BCol md="4" sm="5" class="pt-5">
             <div>
-              <label for="min-sum" class="unique-font"
-                >{{ $t('tradeAdena.minSum') }}</label
-              >
+              <label for="min-sum" class="unique-font">{{
+                $t('tradeAdena.minSum')
+              }}</label>
               <div class="d-flex justify-content-end align-items-center">
                 <BFormInput
                   class="position-relative"

@@ -5,16 +5,18 @@
       <BRow>
         <BCol md="3" ld="12">
           <BFormGroup>
-            <label class="text-uppercase text-secondary fa-xs">{{ $t('bindEmail.email') }}</label>
+            <label class="text-uppercase text-secondary fa-xs">{{
+              $t('bindEmail.email')
+            }}</label>
             <BFormInput
               v-model="getLoggedUser.email"
               type="email"
               class="shadow-none"
             ></BFormInput>
           </BFormGroup>
-          <BButton @click="onBindEmail" variant="primary" class="shadow-none"
-            >{{ $t('bindEmail.emailChange') }}</BButton
-          >
+          <BButton @click="onBindEmail" variant="primary" class="shadow-none">{{
+            $t('bindEmail.emailChange')
+          }}</BButton>
         </BCol>
       </BRow>
     </BContainer>

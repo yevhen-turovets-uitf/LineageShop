@@ -71,7 +71,9 @@
       </BRow>
       <BRow class="pt-3">
         <BCol md="4" class="font-weight-bold text-secondary">
-          <span v-if="!financeOperation.type.isEnrollment">{{ $t('finances.recipient') }}</span>
+          <span v-if="!financeOperation.type.isEnrollment">{{
+            $t('finances.recipient')
+          }}</span>
           <span v-else>{{ $t('finances.sender') }}</span>
         </BCol>
         <BCol md="8">
@@ -80,7 +82,9 @@
       </BRow>
       <BRow class="pt-3">
         <BCol md="4" class="font-weight-bold text-secondary">
-          <span v-if="!financeOperation.type.isEnrollment">{{ $t('finances.toTheRecipient') }}</span>
+          <span v-if="!financeOperation.type.isEnrollment">{{
+            $t('finances.toTheRecipient')
+          }}</span>
           <span v-else>{{ $t('finances.fromTheSender') }}</span>
         </BCol>
         <BCol md="8">
@@ -92,11 +96,17 @@
         </BCol>
       </BRow>
       <BRow class="font-weight-bold text-secondary pt-3" v-if="clickedCancel">
-        <BCol md="8"> {{ $t('finances.reasonForCancellation') }} <span class="text-danger"> *</span> </BCol>
+        <BCol md="8">
+          {{ $t('finances.reasonForCancellation') }}
+          <span class="text-danger"> *</span>
+        </BCol>
       </BRow>
       <BRow class="font-weight-bold text-secondary pt-3" v-if="clickedCancel">
         <BCol md="12">
-          <BFormTextarea :placeholder="$t('finances.reasonForCancellation')" v-model="cancelInfo" />
+          <BFormTextarea
+            :placeholder="$t('finances.reasonForCancellation')"
+            v-model="cancelInfo"
+          />
         </BCol>
       </BRow>
       <BRow class="pt-3">

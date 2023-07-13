@@ -162,7 +162,9 @@ export default {
     async onAddMessage() {
       if (!this.chat.id) {
         await this.addChat({ recipientUserId: this.user.id });
-        await this.setSuccessNotification(this.$t('productDetails.chatCreated'));
+        await this.setSuccessNotification(
+          this.$t('productDetails.chatCreated')
+        );
         await this.getMessageByChatId(this.chat.id);
       }
       await this.addMessage({

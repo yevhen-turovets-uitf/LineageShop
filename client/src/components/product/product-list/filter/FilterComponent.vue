@@ -1,9 +1,9 @@
 <template>
   <BCol cols="9">
     <BNavbar toggleable="md" variant="white">
-      <BNavbarBrand class="d-md-none font-weight-bold" href="#"
-        >{{ $t('productList.filters') }}</BNavbarBrand
-      >
+      <BNavbarBrand class="d-md-none font-weight-bold" href="#">{{
+        $t('productList.filters')
+      }}</BNavbarBrand>
       <BNavbarToggle target="nav-collapse-filter"></BNavbarToggle>
       <BCollapse id="nav-collapse-filter" is-nav
         ><BNavForm class="d-flex flex-wrap">

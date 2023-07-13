@@ -2,10 +2,14 @@
   <div>
     <BListGroup class="mb-3">
       <BListGroupItem>
-        <RouterLink :to="{ name: 'UserAdminPanel' }">{{ $t('adminPanel.users') }}</RouterLink>
+        <RouterLink :to="{ name: 'UserAdminPanel' }">{{
+          $t('adminPanel.users')
+        }}</RouterLink>
       </BListGroupItem>
       <BListGroupItem>
-        <RouterLink :to="{ name: 'OrderAdminPanel' }">{{ $t('adminPanel.order') }}</RouterLink>
+        <RouterLink :to="{ name: 'OrderAdminPanel' }">{{
+          $t('adminPanel.order')
+        }}</RouterLink>
       </BListGroupItem>
       <BListGroupItem>
         <RouterLink :to="{ name: 'SupportAdminPanel' }">

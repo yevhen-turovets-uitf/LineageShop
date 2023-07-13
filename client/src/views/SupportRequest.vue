@@ -75,9 +75,9 @@
               {{ $t('supportRequest.emptyText') }}
             </div>
           </BFormGroup>
-          <BButton type="submit" variant="primary" class="shadow-none"
-            >{{ $t('supportRequest.send') }}</BButton
-          >
+          <BButton type="submit" variant="primary" class="shadow-none">{{
+            $t('supportRequest.send')
+          }}</BButton>
         </BForm>
       </BCol>
     </BRow>

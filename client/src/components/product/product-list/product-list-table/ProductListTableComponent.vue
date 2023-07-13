@@ -2,7 +2,9 @@
   <BTableSimple borderless hover>
     <BThead class="border-bottom pb-3">
       <BTr>
-        <BTh class="font-weight-normal">{{ $t('productList.description') }}</BTh>
+        <BTh class="font-weight-normal">{{
+          $t('productList.description')
+        }}</BTh>
         <BTh class="font-weight-normal">{{ $t('productList.seller') }}</BTh>
         <BTh v-if="availableProperties.includes('availability')">
           <BButton

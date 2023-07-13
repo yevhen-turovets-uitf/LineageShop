@@ -1,9 +1,17 @@
 <template>
   <BNavbarNav class="ml-auto authorized-menu">
-    <BNavItem :to="{ name: 'MyPurchases' }">{{ $t('mainLayoutBlocks.purchases') }}</BNavItem>
-    <BNavItem :to="{ name: 'MySales' }">{{ $t('mainLayoutBlocks.sales') }}</BNavItem>
-    <BNavItem :to="{ name: 'Chat' }">{{ $t('mainLayoutBlocks.messages') }}</BNavItem>
-    <BNavItem :to="{ name: 'Finances' }">{{ $t('mainLayoutBlocks.finance') }}</BNavItem>
+    <BNavItem :to="{ name: 'MyPurchases' }">{{
+      $t('mainLayoutBlocks.purchases')
+    }}</BNavItem>
+    <BNavItem :to="{ name: 'MySales' }">{{
+      $t('mainLayoutBlocks.sales')
+    }}</BNavItem>
+    <BNavItem :to="{ name: 'Chat' }">{{
+      $t('mainLayoutBlocks.messages')
+    }}</BNavItem>
+    <BNavItem :to="{ name: 'Finances' }">{{
+      $t('mainLayoutBlocks.finance')
+    }}</BNavItem>
     <BNavItemDropdown right>
       <template #button-content>
         <div class="user-link-photo">

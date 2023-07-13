@@ -2,9 +2,15 @@
   <BTableSimple borderless hover>
     <BThead class="border-bottom pb-3">
       <BTr>
-        <BTh class="font-weight-normal">{{ $t('productListByUser.description') }}</BTh>
-        <BTh v-if="hasAvailability" class="font-weight-normal">{{ $t('productListByUser.availability') }}</BTh>
-        <BTh class="font-weight-normal text-md-right">{{ $t('productListByUser.price') }}</BTh>
+        <BTh class="font-weight-normal">{{
+          $t('productListByUser.description')
+        }}</BTh>
+        <BTh v-if="hasAvailability" class="font-weight-normal">{{
+          $t('productListByUser.availability')
+        }}</BTh>
+        <BTh class="font-weight-normal text-md-right">{{
+          $t('productListByUser.price')
+        }}</BTh>
       </BTr>
     </BThead>
     <BTbody>

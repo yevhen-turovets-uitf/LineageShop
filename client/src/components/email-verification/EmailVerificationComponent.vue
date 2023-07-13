@@ -1,16 +1,20 @@
 <template>
   <BCol md="4" ld="12">
     <BForm @submit.prevent="onVerifiedEmail">
-      <BFormGroup id="hash-group" :label="$t('emailVerification.code')" label-for="hash">
+      <BFormGroup
+        id="hash-group"
+        :label="$t('emailVerification.code')"
+        label-for="hash"
+      >
         <BFormInput
           id="hash-input"
           v-model="$v.verifiedEmailData.hash.$model"
           :class="status($v.verifiedEmailData.hash)"
         ></BFormInput>
       </BFormGroup>
-      <BButton type="submit" variant="primary"
-        >{{ $t('emailVerification.activate') }}</BButton
-      >
+      <BButton type="submit" variant="primary">{{
+        $t('emailVerification.activate')
+      }}</BButton>
     </BForm>
   </BCol>
 </template>
@@ -67,7 +71,7 @@ export default {
         const verified = await this.verifiedEmail(this.verifiedEmailData);
 
         if (verified !== false) {
-          await this.$router.push({name: 'Auth'});
+          await this.$router.push({ name: 'Auth' });
         }
       } catch (error) {
         this.setErrorNotification(error);

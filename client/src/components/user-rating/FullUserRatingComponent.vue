@@ -1,15 +1,17 @@
 <template>
   <div>
-    <BRow class="text-secondary text-uppercase font-weight-bold fa-xs"
-      >{{ $t('userRating.rating') }}</BRow
-    >
+    <BRow class="text-secondary text-uppercase font-weight-bold fa-xs">{{
+      $t('userRating.rating')
+    }}</BRow>
     <BRow class="d-flex justify-content-start">
       <div class="mr-5 ml-3">
         <BRow>
           <span class="font-weight-bold fa-4x pt-1">{{
             getUserRatingAverage
           }}</span>
-          <span class="font-weight-bold pt-5"> {{ $t('userRating.five') }}</span>
+          <span class="font-weight-bold pt-5">
+            {{ $t('userRating.five') }}</span
+          >
         </BRow>
       </div>
       <div class="pt-3">

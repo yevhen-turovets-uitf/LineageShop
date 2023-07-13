@@ -39,8 +39,8 @@ export default {
       search = search.toString().toLowerCase();
       products = products.filter(product => {
         if (
-            product.description &&
-            product.description.toLowerCase().includes(search)
+          product.description &&
+          product.description.toLowerCase().includes(search)
         ) {
           return true;
         } else if (product.name.toLowerCase().includes(search)) {

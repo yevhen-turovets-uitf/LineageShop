@@ -1,7 +1,11 @@
 <template>
   <BCol md="4" ld="12">
     <BForm @submit.prevent="onRegister">
-      <BFormGroup id="login-group" :label="$t('registration.login')" label-for="login-input">
+      <BFormGroup
+        id="login-group"
+        :label="$t('registration.login')"
+        label-for="login-input"
+      >
         <BFormInput
           id="login-input"
           v-model="$v.registerData.login.$model"
@@ -19,10 +23,15 @@
           v-if="!$v.registerData.login.minLength && clickedLogin"
         >
           {{ $t('registration.minimumLoginLength') }}
-          {{ $v.registerData.login.$params.minLength.min }} {{ $t('registration.character') }}
+          {{ $v.registerData.login.$params.minLength.min }}
+          {{ $t('registration.character') }}
         </div>
       </BFormGroup>
-      <BFormGroup id="email-group" :label="$t('registration.email')" label-for="email-input">
+      <BFormGroup
+        id="email-group"
+        :label="$t('registration.email')"
+        label-for="email-input"
+      >
         <BFormInput
           id="email-input"
           type="text"
@@ -43,7 +52,11 @@
           {{ $t('registration.invalidEmail') }}
         </div>
       </BFormGroup>
-      <BFormGroup id="password-group" :label="$t('registration.password')" label-for="password-input">
+      <BFormGroup
+        id="password-group"
+        :label="$t('registration.password')"
+        label-for="password-input"
+      >
         <BFormInput
           id="password-input"
           type="password"
@@ -62,7 +75,8 @@
           v-if="!$v.registerData.password.minLength && clickedPassword"
         >
           {{ $t('registration.passwordMustBeAtLeast') }}
-          {{ $v.registerData.password.$params.minLength.min }} {{ $t('registration.characters') }}
+          {{ $v.registerData.password.$params.minLength.min }}
+          {{ $t('registration.characters') }}
         </div>
       </BFormGroup>
       <BFormGroup
@@ -104,7 +118,9 @@
       >
         {{ $t('registration.license') }}
       </BFormCheckbox>
-      <BButton type="submit" variant="primary">{{ $t('registration.register') }}</BButton>
+      <BButton type="submit" variant="primary">{{
+        $t('registration.register')
+      }}</BButton>
     </BForm>
   </BCol>
 </template>
@@ -181,10 +197,15 @@ export default {
     async onRegister() {
       if (!this.validationRegisterForm()) {
         try {
-          const isRegisterSuccessful = await this.registerUser(this.registerData);
+          const isRegisterSuccessful = await this.registerUser(
+            this.registerData
+          );
 
           if (isRegisterSuccessful !== false) {
-            await this.$router.push({name: 'EmailVerification', query: {id: isRegisterSuccessful.id}});
+            await this.$router.push({
+              name: 'EmailVerification',
+              query: { id: isRegisterSuccessful.id }
+            });
           }
         } catch (error) {
           this.setErrorNotification(error);

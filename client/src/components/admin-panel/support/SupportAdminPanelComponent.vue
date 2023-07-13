@@ -14,7 +14,9 @@
         />
       </div>
       <div class="d-flex flex-column align-items-center">
-        <span class="text-secondary unique-font">{{ $t('adminPanel.createdAt') }}</span>
+        <span class="text-secondary unique-font">{{
+          $t('adminPanel.createdAt')
+        }}</span>
         <div class="d-flex">
           <BFormInput
             type="date"
@@ -32,11 +34,17 @@
         </div>
       </div>
       <div class="d-flex flex-column align-items-center mx-2">
-        <span class="text-secondary unique-font">{{ $t('adminPanel.ticketStatus') }}</span>
+        <span class="text-secondary unique-font">{{
+          $t('adminPanel.ticketStatus')
+        }}</span>
         <BFormSelect size="sm" v-model="statusId">
           <BFormSelectOption value="null"></BFormSelectOption>
-          <BFormSelectOption value="1">{{ $t('adminPanel.opened') }}</BFormSelectOption>
-          <BFormSelectOption value="2">{{ $t('adminPanel.closed') }}</BFormSelectOption>
+          <BFormSelectOption value="1">{{
+            $t('adminPanel.opened')
+          }}</BFormSelectOption>
+          <BFormSelectOption value="2">{{
+            $t('adminPanel.closed')
+          }}</BFormSelectOption>
         </BFormSelect>
       </div>
     </BRow>
@@ -45,7 +53,9 @@
       :supports="supports(orderType, orderDirection)"
       @orderType="setOrderType"
     ></SupportAdminPanelTable>
-    <EmptyAdminPanelComponent v-else>{{ $t('adminPanel.records') }}</EmptyAdminPanelComponent>
+    <EmptyAdminPanelComponent v-else>{{
+      $t('adminPanel.records')
+    }}</EmptyAdminPanelComponent>
   </div>
 </template>
 

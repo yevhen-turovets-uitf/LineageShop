@@ -34,9 +34,9 @@
         <FontAwesomeIcon :icon="['fas', 'star']" size="xs" />
         <span class="rating-count text-secondary ml-1">23</span>
       </BRow>
-      <BRow class="seller-info font-weight-bold text-secondary fa-xs"
-        >{{ $t('productList.onSite') }}</BRow
-      >
+      <BRow class="seller-info font-weight-bold text-secondary fa-xs">{{
+        $t('productList.onSite')
+      }}</BRow>
     </BCol>
   </BRow>
 </template>

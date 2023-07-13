@@ -63,7 +63,9 @@ export default {
 
       try {
         await this.changeOrderStatus(this.changeOrderStatusData);
-        await this.setSuccessNotification(this.$t('adminPanel.orderDataChanged'));
+        await this.setSuccessNotification(
+          this.$t('adminPanel.orderDataChanged')
+        );
       } catch (error) {
         this.setErrorNotification(error);
       }

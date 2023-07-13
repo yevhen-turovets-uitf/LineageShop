@@ -1,6 +1,8 @@
 <template>
   <BModal :id="`delete-user-wallet-${userWalletId}`" hide-header hide-footer>
-    <h4 class="text-center mt-3 mb-5">{{ $t('userWallet.deleteThisWallet') }}</h4>
+    <h4 class="text-center mt-3 mb-5">
+      {{ $t('userWallet.deleteThisWallet') }}
+    </h4>
     <BButton
       @click="onDeleteUserWallet"
       class="col-12 mb-2 text-uppercase font-weight-bold shadow-none"

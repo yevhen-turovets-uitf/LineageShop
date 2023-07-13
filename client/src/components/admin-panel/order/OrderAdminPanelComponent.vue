@@ -41,7 +41,9 @@
       v-if="isSetOrders"
       :orders="orders"
     ></OrderAdminPanelTable>
-    <EmptyAdminPanelComponent v-else>{{ $t('adminPanel.orderCount') }}</EmptyAdminPanelComponent>
+    <EmptyAdminPanelComponent v-else>{{
+      $t('adminPanel.orderCount')
+    }}</EmptyAdminPanelComponent>
   </div>
 </template>
 

@@ -2,7 +2,11 @@
   <BRow>
     <BCol md="4" ld="12">
       <BForm @submit.prevent="login">
-        <BFormGroup id="email-group" :label="$t('auth.email')" label-for="email-input">
+        <BFormGroup
+          id="email-group"
+          :label="$t('auth.email')"
+          label-for="email-input"
+        >
           <BFormInput
             id="email-input"
             v-model="$v.loginData.email.$model"
@@ -45,13 +49,16 @@
             v-if="!$v.loginData.password.minLength && clickedPassword"
           >
             {{ $t('auth.thePasswordMustContainAMinimum') }}
-            {{ $v.loginData.password.$params.minLength.min }} {{ $t('auth.characters') }}
+            {{ $v.loginData.password.$params.minLength.min }}
+            {{ $t('auth.characters') }}
           </div>
         </BFormGroup>
-        <BButton type="submit" variant="primary">{{ $t('auth.enter') }}</BButton>
-        <RouterLink class="ml-3" :to="{ name: 'ForgotPassword' }"
-          >{{ $t('auth.forgotYourPassword') }}</RouterLink
-        >
+        <BButton type="submit" variant="primary">{{
+          $t('auth.enter')
+        }}</BButton>
+        <RouterLink class="ml-3" :to="{ name: 'ForgotPassword' }">{{
+          $t('auth.forgotYourPassword')
+        }}</RouterLink>
       </BForm>
     </BCol>
     <BCol md="3" ld="12" class="d-flex flex-column">

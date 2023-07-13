@@ -3,7 +3,8 @@
     <TitleComponent>{{ $t('views.notFound') }}</TitleComponent>
     <div>
       {{ $t('views.pageNotFound') }}
-      <RouterLink :to="{ name: 'Index' }">{{ $t('views.mainPage') }}</RouterLink>.
+      <RouterLink :to="{ name: 'Index' }">{{ $t('views.mainPage') }}</RouterLink
+      >.
     </div>
   </div>
 </template>

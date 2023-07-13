@@ -9,9 +9,9 @@
       <BThead>
         <BTr>
           <BTh>{{ $t('userProfile.description') }}</BTh>
-          <BTh v-if="category.hasAvailability" class="text-md-right"
-            >{{ $t('userProfile.stock') }}</BTh
-          >
+          <BTh v-if="category.hasAvailability" class="text-md-right">{{
+            $t('userProfile.stock')
+          }}</BTh>
           <BTh class="text-md-right">{{ $t('userProfile.price') }}</BTh>
         </BTr>
       </BThead>

@@ -5,7 +5,9 @@
     </template>
     <BForm @submit.prevent="onAddFinanceOperation">
       <BFormGroup>
-        <label class="text-uppercase text-secondary fa-xs">{{ $t('finances.paymentMethodLower') }}</label>
+        <label class="text-uppercase text-secondary fa-xs">{{
+          $t('finances.paymentMethodLower')
+        }}</label>
         <BFormSelect
           v-model="addedData.typeId"
           @change="getUserWalletsByWalletType"
@@ -24,7 +26,9 @@
         </BFormSelect>
       </BFormGroup>
       <BFormGroup v-if="addedData.typeId">
-        <label class="text-uppercase text-secondary fa-xs">{{ $t('finances.wallet') }}</label>
+        <label class="text-uppercase text-secondary fa-xs">{{
+          $t('finances.wallet')
+        }}</label>
         <BFormSelect v-model="addedData.walletId" class="shadow-none">
           <BFormSelectOption :value="null">
             {{ $t('finances.chooseAnotherWallet') }}
@@ -39,13 +43,15 @@
         </BFormSelect>
       </BFormGroup>
       <BFormGroup v-if="isShowAddWallet" class="position-relative">
-        <label class="text-uppercase text-secondary fa-xs"
-          >{{ $t('finances.addCard') }}</label
-        >
+        <label class="text-uppercase text-secondary fa-xs">{{
+          $t('finances.addCard')
+        }}</label>
         <BFormInput v-model="addedData.info" class="shadow-none"></BFormInput>
       </BFormGroup>
       <BFormGroup v-if="addedData.typeId" class="position-relative">
-        <label class="text-uppercase text-secondary fa-xs">{{ $t('finances.sumLower') }}</label>
+        <label class="text-uppercase text-secondary fa-xs">{{
+          $t('finances.sumLower')
+        }}</label>
         <BFormInput
           v-model="addedData.money"
           type="number"
@@ -57,7 +63,9 @@
         >
       </BFormGroup>
       <BFormGroup v-if="addedData.typeId" class="position-relative">
-        <label class="text-uppercase text-secondary fa-xs t">{{ $t('finances.receive') }}</label>
+        <label class="text-uppercase text-secondary fa-xs t">{{
+          $t('finances.receive')
+        }}</label>
         <BFormInput
           class="bg-light shadow-none"
           :value="getMoneyWithCommission"
@@ -68,9 +76,9 @@
           >{{ getWalletSymbol }}</span
         >
       </BFormGroup>
-      <BButton type="submit" class="col-12 mb-2" variant="primary"
-        >{{ $t('finances.send') }}</BButton
-      >
+      <BButton type="submit" class="col-12 mb-2" variant="primary">{{
+        $t('finances.send')
+      }}</BButton>
     </BForm>
   </BModal>
 </template>

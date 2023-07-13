@@ -4,9 +4,9 @@
       <h2 class="font-weight-bold">{{ $t('userWallet.addNewWallet') }}</h2>
     </template>
     <BFormGroup>
-      <label class="text-uppercase text-secondary fa-xs"
-        >{{ $t('userWallet.selectWalletType') }}</label
-      >
+      <label class="text-uppercase text-secondary fa-xs">{{
+        $t('userWallet.selectWalletType')
+      }}</label>
       <BFormSelect
         v-model="addForm.walletTypeId"
         :options="optionsUserWallets"
@@ -14,12 +14,14 @@
       ></BFormSelect>
     </BFormGroup>
     <BFormGroup>
-      <label class="text-uppercase text-secondary fa-xs">{{ $t('userWallet.addCard') }}</label>
+      <label class="text-uppercase text-secondary fa-xs">{{
+        $t('userWallet.addCard')
+      }}</label>
       <BFormInput v-model="addForm.info" class="shadow-none"></BFormInput>
     </BFormGroup>
-    <BButton @click="onAddUserWallet" class="col-12 mb-2" variant="primary"
-      >{{ $t('userWallet.add') }}</BButton
-    >
+    <BButton @click="onAddUserWallet" class="col-12 mb-2" variant="primary">{{
+      $t('userWallet.add')
+    }}</BButton>
   </BModal>
 </template>
 

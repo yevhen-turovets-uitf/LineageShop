@@ -17,8 +17,7 @@
         </BCol>
         <BCol sm="6" xs="12">
           <div class="d-flex justify-content-end align-items-center">
-            <div class="ml-auto">
-            </div>
+            <div class="ml-auto"></div>
             <div class="ml-3">{{ $t('mainLayoutBlocks.developed') }}</div>
           </div>
         </BCol>

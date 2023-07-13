@@ -25,7 +25,9 @@
           class="shadow-none"
         ></BFormInput>
       </BFormGroup>
-      <BButton type="submit" variant="primary">{{ $t('resetPassword.change') }}</BButton>
+      <BButton type="submit" variant="primary">{{
+        $t('resetPassword.change')
+      }}</BButton>
     </BForm>
   </BCol>
 </template>

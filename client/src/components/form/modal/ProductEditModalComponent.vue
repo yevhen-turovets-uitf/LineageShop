@@ -8,7 +8,9 @@
       @formatFormData="formatFormData"
     />
     <div class="mb-3 col-5 p-0">
-      <div class="fa-xs text-uppercase mb-2">{{ $t('form.priceForBuyers') }}</div>
+      <div class="fa-xs text-uppercase mb-2">
+        {{ $t('form.priceForBuyers') }}
+      </div>
       <BTableSimple borderless>
         <BTbody>
           <BTr>
@@ -31,12 +33,12 @@
         {{ $t('form.active') }}
       </BFormCheckbox>
     </div>
-    <BButton @click="sendForm()" class="col-12 mb-2" variant="primary"
-      >{{ $t('form.save') }}</BButton
-    >
-    <BButton @click="productDelete" class="col-12" variant="danger"
-      >{{ $t('form.delete') }}</BButton
-    >
+    <BButton @click="sendForm()" class="col-12 mb-2" variant="primary">{{
+      $t('form.save')
+    }}</BButton>
+    <BButton @click="productDelete" class="col-12" variant="danger">{{
+      $t('form.delete')
+    }}</BButton>
   </BModal>
 </template>
 

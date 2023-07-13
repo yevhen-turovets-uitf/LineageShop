@@ -14,7 +14,9 @@
         />
       </div>
       <div class="d-flex flex-column align-items-center">
-        <span class="text-secondary unique-font">{{ $t('supportRequestTable.createdDate') }}</span>
+        <span class="text-secondary unique-font">{{
+          $t('supportRequestTable.createdDate')
+        }}</span>
         <div class="d-flex">
           <BFormInput
             type="date"
@@ -32,7 +34,9 @@
         </div>
       </div>
       <div class="d-flex flex-column align-items-center mx-2">
-        <span class="text-secondary unique-font">{{ $t('supportRequestTable.ticketStatus') }}</span>
+        <span class="text-secondary unique-font">{{
+          $t('supportRequestTable.ticketStatus')
+        }}</span>
         <BFormSelect size="sm" v-model="statusId">
           <BFormSelectOption value=""></BFormSelectOption>
           <BFormSelectOption :value="$getConst('SUPPORT_REQUEST_STATUS').OPEN">
@@ -57,7 +61,9 @@
       :supports="supports(orderType, orderDirection)"
       @orderType="setOrderType"
     />
-    <EmptyTableComponent v-else>{{ $t('supportRequestTable.records') }}</EmptyTableComponent>
+    <EmptyTableComponent v-else>{{
+      $t('supportRequestTable.records')
+    }}</EmptyTableComponent>
   </div>
 </template>
 

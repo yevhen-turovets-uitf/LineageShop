@@ -5,9 +5,9 @@
       <BRow>
         <BCol md="3" ld="12">
           <BFormGroup>
-            <label class="text-uppercase text-secondary fa-xs"
-              >{{ $t('changePassword.currentPassword') }}</label
-            >
+            <label class="text-uppercase text-secondary fa-xs">{{
+              $t('changePassword.currentPassword')
+            }}</label>
             <BFormInput
               v-model="passwordData.currentPassword"
               class="shadow-none"
@@ -15,22 +15,22 @@
             ></BFormInput>
           </BFormGroup>
           <BFormGroup>
-            <label class="text-uppercase text-secondary fa-xs"
-              >{{ $t('changePassword.newPassword') }}</label
-            >
+            <label class="text-uppercase text-secondary fa-xs">{{
+              $t('changePassword.newPassword')
+            }}</label>
             <BFormInput
               v-model="passwordData.newPassword"
               class="shadow-none"
               type="password"
             ></BFormInput>
-            <span class="text-secondary fa-swap-opacity fa-xs"
-              >{{ $t('changePassword.minimum') }}</span
-            >
+            <span class="text-secondary fa-swap-opacity fa-xs">{{
+              $t('changePassword.minimum')
+            }}</span>
           </BFormGroup>
           <BFormGroup>
-            <label class="text-uppercase text-secondary fa-xs"
-              >{{ $t('changePassword.confirmPassword') }}</label
-            >
+            <label class="text-uppercase text-secondary fa-xs">{{
+              $t('changePassword.confirmPassword')
+            }}</label>
             <BFormInput
               v-model="passwordData.confirmNewPassword"
               class="shadow-none"

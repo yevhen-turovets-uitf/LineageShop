@@ -68,7 +68,9 @@
       </BRow>
       <BRow class="pt-3">
         <BCol md="4" class="font-weight-bold text-secondary">
-          <span v-if="!financeOperation.type.isEnrollment">{{ $t('adminPanel.toRecipient') }}</span>
+          <span v-if="!financeOperation.type.isEnrollment">{{
+            $t('adminPanel.toRecipient')
+          }}</span>
           <span v-else>{{ $t('adminPanel.toSender') }}</span>
         </BCol>
         <BCol md="8">

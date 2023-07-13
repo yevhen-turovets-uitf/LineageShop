@@ -11,12 +11,11 @@
         <BCollapse id="nav-collapse" is-nav>
           <BNavbarNav>
             <BNavItemDropdown :text="$t('mainLayoutBlocks.help')" right>
-              <BDropdownItem href="#">{{ $t('mainLayoutBlocks.rules') }}</BDropdownItem>
+              <BDropdownItem href="#">{{
+                $t('mainLayoutBlocks.rules')
+              }}</BDropdownItem>
               <BDropdownItem href="#">
-                <RouterLink
-                    :to="{ name: 'FAQ' }"
-                    class="text-decoration-none"
-                >
+                <RouterLink :to="{ name: 'FAQ' }" class="text-decoration-none">
                   {{ $t('mainLayoutBlocks.helpCenter') }}
                 </RouterLink>
               </BDropdownItem>

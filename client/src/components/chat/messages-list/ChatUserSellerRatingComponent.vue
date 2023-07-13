@@ -10,7 +10,9 @@
           size="xs"
         ></BFormRating>
       </div>
-      <a href="#reviews-list"> {{ getCountAllUserRatings }} {{ $t('chat.reviews') }} </a>
+      <a href="#reviews-list">
+        {{ getCountAllUserRatings }} {{ $t('chat.reviews') }}
+      </a>
       <div class="text-secondary mt-2">
         {{ $t('chat.writeToTheSeller') }}
         <br />

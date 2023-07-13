@@ -8,7 +8,10 @@
         {{ $t('adminPanel.reasonForCancellation') }}
       </BRow>
       <BRow class="pt-3">
-        <BFormTextarea :placeholder="$t('adminPanel.reasonForCancellation')" v-model="cancelInfo" />
+        <BFormTextarea
+          :placeholder="$t('adminPanel.reasonForCancellation')"
+          v-model="cancelInfo"
+        />
       </BRow>
       <BRow class="pt-3">
         <BCol md="4" class="font-weight-bold text-secondary">

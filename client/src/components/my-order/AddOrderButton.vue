@@ -55,9 +55,7 @@ export default {
               params: { orderId: this.order.id }
             });
           } else {
-            this.setErrorNotification(
-                this.$t('myOrder.selectedQuantity')
-            );
+            this.setErrorNotification(this.$t('myOrder.selectedQuantity'));
           }
         } else {
           this.setErrorNotification(this.$t('myOrder.choosePaymentType'));

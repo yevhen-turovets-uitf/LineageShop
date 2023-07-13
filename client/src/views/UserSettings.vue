@@ -16,58 +16,59 @@
               ></AvatarComponent>
             </div>
             <div class="ml-5 d-flex flex-column w-50">
+              <RouterLink to="#" class="text-dark text-decoration-none">
+                <BButton
+                  variant="light"
+                  class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                >
+                  {{ $t('userSettings.changeAvatar') }}
+                </BButton>
+              </RouterLink>
 
+              <RouterLink
+                :to="{ name: 'ChangePassword' }"
+                class="text-dark text-decoration-none"
+              >
+                <BButton
+                  variant="light"
+                  class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                >
+                  {{ $t('userSettings.changePassword') }}
+                </BButton>
+              </RouterLink>
 
-                <RouterLink to="#" class="text-dark text-decoration-none">
-                  <BButton
-                      variant="light"
-                      class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
-                  >
-                    {{ $t('userSettings.changeAvatar') }}
-                  </BButton>
-                </RouterLink>
+              <RouterLink
+                :to="{ name: 'BindEmail' }"
+                class="text-dark text-decoration-none"
+              >
+                <BButton
+                  variant="light"
+                  class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                >
+                  {{ $t('userSettings.changeEmail') }}
+                </BButton>
+              </RouterLink>
 
-                <RouterLink :to="{ name: 'ChangePassword' }" class="text-dark text-decoration-none">
-                  <BButton
-                    variant="light"
-                    class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
-                  >
-                    {{ $t('userSettings.changePassword') }}
-                  </BButton>
-                </RouterLink>
-
-                <RouterLink
-                  :to="{ name: 'BindEmail' }"
-                  class="text-dark text-decoration-none"
-                  >
-                  <BButton
-                      variant="light"
-                      class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
-                  >
-                    {{ $t('userSettings.changeEmail') }}
-                  </BButton>
-                </RouterLink>
-
-
-                <RouterLink
-                  :to="{ name: 'UserWallets' }"
-                  class="text-dark text-decoration-none"
-                  >
-                  <BButton
-                      variant="light"
-                      class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
-                  >
-                    {{ $t('userSettings.wallets') }}
-                  </BButton>
-                </RouterLink>
-
+              <RouterLink
+                :to="{ name: 'UserWallets' }"
+                class="text-dark text-decoration-none"
+              >
+                <BButton
+                  variant="light"
+                  class="pl-4 pr-4 mb-2 font-weight-bold shadow-none profile-link"
+                >
+                  {{ $t('userSettings.wallets') }}
+                </BButton>
+              </RouterLink>
             </div>
           </BRow>
         </BCol>
       </BRow>
       <BRow class="pt-4">
         <BCol cols="12" md="4">
-          <h5 class="font-weight-bold">{{ $t('userSettings.notifications') }}</h5>
+          <h5 class="font-weight-bold">
+            {{ $t('userSettings.notifications') }}
+          </h5>
         </BCol>
         <BCol cols="12" md="8" class="m-3 m-md-0">
           <div>

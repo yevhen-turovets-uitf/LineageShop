@@ -1,6 +1,9 @@
 <template>
   <div class="mt-3">
-    <h4>{{ $t('supportTable.yourSearch') }} <slot /> {{ $t('supportTable.didNotMatch') }}</h4>
+    <h4>
+      {{ $t('supportTable.yourSearch') }} <slot />
+      {{ $t('supportTable.didNotMatch') }}
+    </h4>
   </div>
 </template>
 
