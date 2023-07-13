@@ -23,16 +23,14 @@ export default {
 
     if (filterValue !== undefined && filterValue !== 'null') {
       let filterName = firstFilter[1];
-
       products = products.filter(
         product => product[filterName].id === filterValue
       );
     }
     if (secondFilterValue !== undefined && secondFilterValue !== 'null') {
       let secondFilterName = secondFilter[1];
-
       products = products.filter(
-        product => product[secondFilterValue].id === secondFilterName
+        product => product[secondFilterName].id === secondFilterValue
       );
     }
     if (search.length > 0) {
